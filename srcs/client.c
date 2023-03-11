@@ -6,45 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:26:27 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/03/11 02:39:29 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/03/11 02:53:45 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/client.h"
-
-static int	ft_is_space(char c)
-{
-	return (c == '\f' || c == '\t' || c == ' '
-		|| c == '\n' || c == '\r' || c == '\v');
-}
-
-int	ft_atoi(const char *str)
-{
-	int		sign;
-	long	res;
-
-	res = 0;
-	sign = 1;
-	while (ft_is_space(*str))
-		str++;
-	if (*str == '-' || *str == '+')
-	{
-		if (*str == '-')
-			sign = -1;
-		else if (*str == '+')
-			sign = 1;
-		str++;
-	}
-	while (*str && ft_isdigit(*str))
-	{
-		res *= 10;
-		res += (*str) - 48;
-		str++;
-	}
-	res = res * sign;
-	return (res);
-}
-
 
 void	send_sig(int pid, char c)
 {
@@ -69,7 +35,7 @@ void	client(pid_t pid, char *str)
 		send_sig(pid, *str);
 		str++;
 	}
-	ft_putstr("Message sent\n");
+	ft_putstr_fd("Message sent\n", 1);
 }
 
 int main(int ac, char	**av)

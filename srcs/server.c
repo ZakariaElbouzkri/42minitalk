@@ -6,13 +6,11 @@
 /*   By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/10 22:14:23 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/03/11 02:27:28 by zel-bouz         ###   ########.fr       */
+/*   Updated: 2023/03/11 02:59:10 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/server.h"
-
-
 
 void	sig_handler(int sig)
 {
