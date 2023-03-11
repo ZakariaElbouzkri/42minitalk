@@ -1,21 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   server.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 14:05:01 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/21 01:43:10 by zel-bouz         ###   ########.fr       */
+/*   Created: 2023/03/10 22:15:45 by zel-bouz          #+#    #+#             */
+/*   Updated: 2023/03/11 02:39:56 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef SERVER_H
+#define SERVER_H
 
-int	ft_toupper(int c)
-{
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	else
-		return (c);
-}
+# include "ft_printf.h"
+# include <signal.h>
+
+#endif

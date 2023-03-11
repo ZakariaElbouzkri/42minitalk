@@ -1,29 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*   ft_putptr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 02:24:41 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/21 01:42:56 by zel-bouz         ###   ########.fr       */
+/*   Created: 2022/11/04 17:28:23 by zel-bouz          #+#    #+#             */
+/*   Updated: 2023/03/11 02:33:03 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
-char	*ft_strrchr(const char *s, int c)
+int	ft_putptr(unsigned long n, int fd)
 {
-	size_t	i;
+	int	len;
 
-	i = ft_strlen(s);
-	while ((i + 1) > 0)
-	{
-		if ((char)s[i] == (char)c)
-			return ((char *) &s[i]);
-		i--;
-	}
-	if (c == 0)
-		return ((char *) &s[i]);
-	return (NULL);
+	len = 0;
+	len += ft_putstr_fd("0x", fd);
+	len += ft_puthexa(n, fd, 'x');
+	return (len);
 }

@@ -1,20 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   client.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 14:09:34 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/21 01:41:04 by zel-bouz         ###   ########.fr       */
+/*   Created: 2023/03/10 22:14:57 by zel-bouz          #+#    #+#             */
+/*   Updated: 2023/03/11 02:39:47 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#ifndef CLIENT_H
+#define CLIENT_H
 
-int	ft_isalnum(int c)
-{
-	if (ft_isalpha(c) || ft_isdigit(c))
-		return (1);
-	return (0);
-}
+# include "ft_printf.h"
+# include <signal.h>
+
+
+#endif

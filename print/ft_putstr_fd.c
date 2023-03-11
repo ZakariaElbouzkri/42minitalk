@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlcpy.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: zel-bouz <zel-bouz@student.42.fr>          +#+  +:+       +#+        */
+/*   By: zel-bouz <zel-bouz@student.1337.ma>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 14:12:20 by zel-bouz          #+#    #+#             */
-/*   Updated: 2023/02/21 01:42:39 by zel-bouz         ###   ########.fr       */
+/*   Created: 2022/10/12 01:41:51 by zel-bouz          #+#    #+#             */
+/*   Updated: 2023/03/11 02:33:05 by zel-bouz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "../includes/ft_printf.h"
 
-size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+int	ft_putstr_fd(char *s, int fd)
 {
-	size_t	s_len;
+	int	len;
 
-	s_len = ft_strlen(src);
-	if (!dstsize)
-		return (s_len);
-	while (*src && --dstsize)
-	{
-		*dst++ = *src++;
-	}
-	*dst = '\0';
-	return (s_len);
+	len = 0;
+	if (!s)
+		return (len += write(fd, "(null)", 6));
+	while (*s)
+		len += ft_putchar_fd(*s++, 1);
+	return (len);
 }
